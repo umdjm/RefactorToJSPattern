@@ -19,7 +19,8 @@ function AssignmentSelectorImpl(selector, model) {
         assignmentSelector.toggleHidden()
     });
 
-    assignmentSelector.delegate('.assignment-selector .grades button', 'click', function () {
+    assignmentSelector.delegate('.assignment-selector .grades button', 'click', function (event) {
+        event.preventDefault();
         var $button = $(this);
         model.set('grade', $button.text())
     });
