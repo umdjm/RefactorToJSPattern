@@ -11,7 +11,7 @@ var ReadyTest = ReadyTest || {};
             id: 1,
             hidden: true,
             grades: [3, 4, 5],
-            model: model
+            model: model.data()
         };
 
         var delegate = function(selector, type, func){

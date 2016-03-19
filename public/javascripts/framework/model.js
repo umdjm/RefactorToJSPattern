@@ -1,19 +1,19 @@
 var Model = function(properties){
     var changeListeners = [];
-    var data = _.extend({}, properties);
+    var _data = _.extend({}, properties);
 
     function get(property){
-        return data[property];
+        return _data[property];
     }
 
     function set(property, value){
-        data[property] = value;
+        _data[property] = value;
         triggerChange();
     }
 
     function triggerChange() {
         _.each(changeListeners, function(listener){
-            listener(data);
+            listener(_data);
         })
     }
 
@@ -21,7 +21,12 @@ var Model = function(properties){
         changeListeners.push(listener);
     }
 
+    function data() {
+        return _data;
+    }
+
     return {
+        data: data,
         onChange: onChange,
         set: set,
         get: get
