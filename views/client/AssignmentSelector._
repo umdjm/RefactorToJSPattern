@@ -1,0 +1,25 @@
+<button id="student-1-assignment-selector-button">Grade <%=model.grade%></button>
+<div class="assignment-selector <%if(hidden){%>hide<%}%>">
+    <div class="grades">
+        <label>Grades</label><br>
+        <% _.each(grades, function(number){ %>
+        <button class="<%if(model.grade == number){%>selected<%}%>"><%=number%></button>
+        <% }) %>
+    </div>
+    <div class="start-date">
+        <label>Start Date</label>
+        <input name="start-date" type="date" value="<%=model.startDate%>">
+    </div>
+    <div class="end-date">
+        <label>End Date</label>
+        <input type="date" name="end-date" value="<%=model.endDate%>">
+    </div>
+    <div class="tests">
+        <label>Number of Tests</label>
+        <radiogroup>
+            <label>8</label><input type="radio" name="tests" value="8"  <% if(model.tests == 8) {%> checked <% } %> />
+            <label>12</label><input type="radio" name="tests" value="12" <% if(model.tests == 12) {%> checked <% } %> />
+            <label>20</label><input type="radio" name="tests" value="20" <% if(model.tests == 20) {%> checked <% } %> />
+        </radiogroup>
+    </div>
+</div>

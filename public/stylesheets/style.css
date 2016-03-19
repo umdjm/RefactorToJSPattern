@@ -1,0 +1,7 @@
+.assignment-selector .grades button {
+  background-color: blue;
+}
+
+.assignment-selector .grades button.selected {
+  background-color: red;
+}

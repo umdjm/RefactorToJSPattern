@@ -1,0 +1,11 @@
+extends layout
+block content
+  script(src='/javascripts/framework/model.js')
+  script(src='/javascripts/ReadyTest/AssignmentSelector.js')
+  script(src='/javascripts/ReadyTest/AssignmentSelectorImpl.js')
+  script#ready-test-assignment-selector-template(type='text/template')
+    include ./client/AssignmentSelector._
+
+  div#student-1
+  div#student-2
+  div#student-3
