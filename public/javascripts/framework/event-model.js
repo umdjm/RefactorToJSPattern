@@ -1,4 +1,6 @@
-var Model = function(properties){
+
+
+var EventModel = function(properties){
     var changeListeners = [];
     var _data = _.extend({}, properties);
 
